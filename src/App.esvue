@@ -1,0 +1,35 @@
+<codigo configuracion="">
+importar { ref } desde 'vue'
+
+const contador = ref(0)
+
+funcion aumentarContador() {
+  contador.value++
+}
+
+funcion resetearContador() {
+  contador.value = 0
+}
+</codigo>
+
+<plantilla>
+  <division clase="grid place-items-center min-h-screen">
+    <division clase="space-y-10">
+      <division clase="flex flex-col items-center space-y-3 text-center">
+        <imagen fuente="/favicon.ico" clase="w-24 h-24">
+        <t1 clase="text-2xl">Hola desde EsJS + EsVue!</t1>
+        <segmento>Contador: {{ contador }}</segmento>
+        <boton @click="aumentarContador()" clase="p-2 rounded border hover:bg-gray-100">
+          Aumentar contador
+        </boton>
+        <boton @click="resetearContador()" clase="p-2 rounded border hover:bg-gray-100">
+          Resetear contador
+        </boton>
+      </division>
+
+      <division clase="grid place-items-center">
+        <enlace clase="text-blue-600 dark:text-blue-500 hover:underline" referencia="https://github.com/es-js/esjs" aria-label="Star es-js/esjs on GitHub">Dejá tu estrella en GitHub!</enlace>
+      </division>
+    </division>
+  </division>
+</plantilla>
